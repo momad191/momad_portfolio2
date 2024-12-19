@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import ChatbotUi from "@/app/features/chatbot/ChatbotUi";
-import { dbConnect } from "../lib/mongo";
+// import { dbConnect } from "../lib/mongo";
 
 const JetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -16,15 +16,13 @@ const JetBrainsMono = JetBrains_Mono({
 });
 
 export default async function RootLayout({ children }) {
-  await dbConnect();
+  // await dbConnect();
 
   return (
     <html lang="en">
       <body className={JetBrainsMono.variable}>
         <Header />
-        <br></br>
-        <br></br>
-        <br></br>
+
         <StairTransition />
         <PageTransition>
           {children}

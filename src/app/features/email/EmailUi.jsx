@@ -54,7 +54,7 @@ const TranslationUi = () => {
       <div className="bg-white p-8 rounded-2xl shadow-lg w-full  mr-10 ml-10 ">
         {/* Title */}
         <h1 className="text-2xl font-bold text-black text-center mb-6">
-          Faiz Translator
+          Email writing
         </h1>
         <div className="flex-1">
           <label htmlFor="inputText" className="text-black font-semibold">

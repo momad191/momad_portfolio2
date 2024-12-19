@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: "standalone",
+  // output: "standalone",
+  output: process.env.BUILD_STANDALONE === "true" ? "standalone" : undefined,
   images: {
     remotePatterns: [
       {
@@ -24,6 +25,10 @@ const nextConfig: NextConfig = {
         // pathname: '/account123/**',
       },
     ],
+  },
+  env: {
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    MONGO_DB_CONNECTION_STRING: process.env.MONGO_DB_CONNECTION_STRING,
   },
 };
 
